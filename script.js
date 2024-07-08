@@ -577,19 +577,23 @@ function pasboutton(){
 }
 function openpage(){
     if (user.value === "Alois" && mdp.value === "22.11.22"){
-        window.open("index.html");
+        window.open("index2.html");
         return 1;
     }
     if (user.value === "Gaspard" && mdp.value === "04.03.99"){
-        window.open("index.html");
+        window.open("index2.html");
         return 1;
     }
     if (user.value === "Bertrand" && mdp.value === "31.05.68"){
-        window.open("index.html");
+        window.open("index2.html");
+        return 1;
+    }
+    if (user.value === "Zacharie" && mdp.value === "02.02.01"){
+        window.open("index2.html");
         return 1;
     }
     if (user.value === "Flavie" && mdp.value === "22.11.22"){
-        window.open("index.html");
+        window.open("index2.html");
         return 1;
     } else {
         alert("Mauvais mot de passe ou utilisateur !");
