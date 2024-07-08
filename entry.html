@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style_entry.css">
+</head>
+<body>
+
+<div id="title">
+    <h2>CONNEXION OXO</h2>
+</div>
+
+<form action="/action_page.php" method="post">
+  <div class="imgcontainer">
+    <div id="Name">OXO</div>
+  </div>
+
+  <div class="container">
+    <label class="labels" for="uname" style="color: rgb(50, 50, 50);"><b>Utilisateur</b></label>
+    <input id="utilisateur" type="text" placeholder="Entrez le num d'utilisateur" name="uname" required>
+
+    <label class="labels" for="psw" style="color: rgb(50, 50, 50);"><b>Mot de passe</b></label>
+    <input id="mdp"  type="password" placeholder="Entrez le mot de passe" name="psw" required>
+        
+    <button type="submit" onclick="openpage()">Connexion</button>
+  </div>
+  <div class="container">
+    <button type="button" class="cancelbtn" onclick="cancel()">Cancel</button>
+  </div>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

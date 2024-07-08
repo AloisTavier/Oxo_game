@@ -1,0 +1,110 @@
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:seashell;
+    margin:0;
+}
+::placeholder{
+    color: #5c5c5c;
+    font-size: medium;
+}
+#title{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #f1f1f1;
+    top: 0;
+    height: 60px;
+    background-color: rgb(121, 133, 184);
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    /*font-weight:bold;*/
+}
+.labels{
+    font-size: large;
+}
+input[type=text], input[type=password] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: medium;
+  display: inline-block;
+  border: 1px solid rgb(50, 50, 50);
+  box-sizing: border-box;
+  background-color:seashell;
+  color: #575757;
+}
+
+button {
+  background-color: #535353;
+  color: white;
+  font-size: medium;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.95;
+  transform: scale(1.03);
+}
+button:active {
+  background-color:#949090;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.cancelbtn:hover {
+    transform: scale(1.06);
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 0px 0;
+  z-index: 0;
+}
+#Name{
+    transform: translate(0, 35px);
+    text-align: center;
+    color: #616ca2;
+    justify-content: center ;
+    font-size: 30em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-shadow: 10px 10px 10px #686767;
+    z-index: 3;
+    opacity: 1;
+    z-index: 0;
+}
+
+.container {
+  transform: translate(0, -370px);
+  padding: 0 36% 0 36%;
+  z-index: 1;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}

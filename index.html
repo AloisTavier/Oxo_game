@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Jeu oxo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.O">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="title">
+        <h2>JEU OXO</h2>
+        <input id="score" style="display: none;" readonly>
+    </div>
+    <div id="Name">OXO</div>
+    <div id="container">
+        
+        <div id="board">
+            <input class="cellboard" id="c-1" readonly>
+            <input class="cellboard" id="c-2" readonly>
+            <input class="cellboard" id="c-3" readonly>
+            <input class="cellboard" id="c-4" readonly>
+            <input class="cellboard" id="c-5" readonly>
+            <input class="cellboard" id="c-6" readonly>
+            <input class="cellboard" id="c-7" readonly>
+            <input class="cellboard" id="c-8" readonly>
+            <input class="cellboard" id="c-9" readonly>
+        </div>
+        <div id="board2" style="display:none">
+            <button class="cellboard2" id="ce-1" onclick="playc(1)"></button>
+            <button class="cellboard2" id="ce-2" onclick="playc(2)"></button>
+            <button class="cellboard2" id="ce-3" onclick="playc(3)"></button>
+            <button class="cellboard2" id="ce-4" onclick="playc(4)"></button>
+            <button class="cellboard2" id="ce-5" onclick="playc(5)"></button>
+            <button class="cellboard2" id="ce-6" onclick="playc(6)"></button>
+            <button class="cellboard2" id="ce-7" onclick="playc(7)"></button>
+            <button class="cellboard2" id="ce-8" onclick="playc(8)"></button>
+            <button class="cellboard2" id="ce-9" onclick="playc(9)"></button>
+        </div>
+        <button id="pasboutton" onclick="pasboutton()" style="display: none;">pasbutton</button>
+        <input id="winner" style="display:none" readonly>
+        <div id="mode">
+            <button class="buttonmode" id="mode1" onclick="mode1()">Jouer contre l'ordinateur</button>
+            <button class="buttonmode" id="mode2" onclick="mode2()">Mode 2 joueurs</button>
+        </div>
+        <div id="players" style="display:none">
+            <div id="player1">
+                <h1>Joueur 1</h1>
+                <div class="grid">
+                    <button class="cell" id="cell-1" onclick="play(1)"></button>
+                    <button class="cell" id="cell-2" onclick="play(2)"></button>
+                    <button class="cell" id="cell-3" onclick="play(3)"></button>
+                    <button class="cell" id="cell-4" onclick="play(4)"></button>
+                    <button class="cell" id="cell-5" onclick="play(5)"></button>
+                    <button class="cell" id="cell-6" onclick="play(6)"></button>
+                    <button class="cell" id="cell-7" onclick="play(7)"></button>
+                    <button class="cell" id="cell-8" onclick="play(8)"></button>
+                    <button class="cell" id="cell-9" onclick="play(9)"></button>
+                </div>
+            </div>
+            <div id= "player2">
+                <h1>Joueur 2</h1>
+                <div class="grid">
+                    <button class="cell" id="cell2-1" onclick="play2(1)"></button>
+                    <button class="cell" id="cell2-2" onclick="play2(2)"></button>
+                    <button class="cell" id="cell2-3" onclick="play2(3)"></button>
+                    <button class="cell" id="cell2-4" onclick="play2(4)"></button>
+                    <button class="cell" id="cell2-5" onclick="play2(5)"></button>
+                    <button class="cell" id="cell2-6" onclick="play2(6)"></button>
+                    <button class="cell" id="cell2-7" onclick="play2(7)"></button>
+                    <button class="cell" id="cell2-8" onclick="play2(8)"></button>
+                    <button class="cell" id="cell2-9" onclick="play2(9)"></button>
+                </div>
+            </div>
+        </div>
+        <div id ="reseters" style="display: none;">
+        <button class="reseter" id="reset" onclick="reset()" >Menu principal</button>
+        <button class="reseter" id="reset2" onclick="reset2()">Rejouer</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
