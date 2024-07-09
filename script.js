@@ -66,7 +66,7 @@ function mode2(){
         board_mode2.style.opacity = 0.8;
         document.body.style.background = "linear-gradient(to right, #f9cece 50%,  #c9d8ff 50%)";
         score_compte.style.opacity = 1;
-        players.style.transform = "translate(0%, -152%)";
+        players.style.transform = "translate(0%, -165%)";
         players.style.opacity = 1;
         text_oxo.style.scale = 1.8;
         reseters.style.transform = "translate(0%, -390%)";
