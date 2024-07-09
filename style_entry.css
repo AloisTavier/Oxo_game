@@ -78,7 +78,7 @@ button:active {
     text-align: center;
     color: #616ca2;
     justify-content: center ;
-    font-size: 30em;
+    font-size: 28em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     text-shadow: 10px 10px 10px #686767;
@@ -88,7 +88,7 @@ button:active {
 }
 
 .container {
-  transform: translate(0, -370px);
+  transform: translate(0, -350px);
   padding: 0 36% 0 36%;
   z-index: 1;
 }
