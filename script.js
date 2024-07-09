@@ -603,6 +603,7 @@ function openpage(){
     if (user.value === "Flavie" && mdp.value === "29.12.04"){
         window.open("index2.html");
         return 1;
+    }
     if (user.value === "user" && mdp.value === "1234"){
         window.open("index2.html");
         return 1;
