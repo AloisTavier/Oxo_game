@@ -10,7 +10,6 @@ body{
 }
 
 #Name{
-    height: 400px;
     transform: translate(0, 35px);
     text-align: center;
     color: #4b5caa;
