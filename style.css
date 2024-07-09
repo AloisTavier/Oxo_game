@@ -202,10 +202,10 @@ body{
     transform: scale(0.95);
 }
 #pasboutton{
-    height: 300px;
-    width: 300px;
+    height: 330px;
+    width: 330px;
     position: relative;
-    top: -345px;
+    top: -370px;
     opacity: 0;
     z-index:2;
 }
