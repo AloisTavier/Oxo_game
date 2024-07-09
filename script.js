@@ -576,11 +576,19 @@ function pasboutton(){
     alert("Pour jouer cliquez sur les claviers \"Joueur 1\" et \"Joueur 2\" ci dessous. Pour placer votre symbole il suffit d'appuyer sur la case du clavier correspondant a celle du tableau.");
 }
 function openpage(){
-    if (user.value === "Alois" && mdp.value === "22.11.22"){
+    if (user.value === "Alois" && mdp.value === "221122"){
         window.open("index2.html");
         return 1;
     }
     if (user.value === "Gaspard" && mdp.value === "04.03.99"){
+        window.open("index2.html");
+        return 1;
+    }
+    if (user.value === "Catherine" && mdp.value === "25.12.68"){
+        window.open("index2.html");
+        return 1;
+    }
+    if (user.value === "Anna" && mdp.value === "14.01.97"){
         window.open("index2.html");
         return 1;
     }
@@ -592,13 +600,14 @@ function openpage(){
         window.open("index2.html");
         return 1;
     }
-    if (user.value === "Flavie" && mdp.value === "22.11.22"){
+    if (user.value === "Flavie" && mdp.value === "29.12.04"){
         window.open("index2.html");
         return 1;
     } else {
-        alert("Mauvais mot de passe ou utilisateur !");
+        alert("Mot de passe ou nom d'utilisateur non valide");
         user.value = "";
         mdp.value = "";
+        return 0;
     }
 }
 function cancel(){
