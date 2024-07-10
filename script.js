@@ -254,8 +254,11 @@ function computer_moves(){
     let count = 0;
     let move = compute_move();
     if (move !=0 ){
-        move.style.color = "#3036f2";
-        move.innerHTML = "O";
+
+        setTimeout(function placemove(){
+            move.style.color = "#3036f2";
+            move.innerHTML = "O";
+        }, 300);
         if (checkwinner_computer() == 1){
             setTimeout(function lose(){
                 alert("Tu as perdu :(");
@@ -271,8 +274,10 @@ function computer_moves(){
     }
     let move_pot = compute_move2();
     if (move_pot !=0){
-        move_pot.style.color = "#3036f2";
-        move_pot.innerHTML = "O";
+        setTimeout(function placemove(){
+            move_pot.style.color = "#3036f2";
+            move_pot.innerHTML = "O";
+        }, 300);
         if (checkwinner_computer() == 1){
             setTimeout(function lose(){
                 alert("Tu as perdu :(");
@@ -292,8 +297,11 @@ function computer_moves(){
         board_case = board_mode1_cases[random];
         
         if (board_case.innerHTML != "X" && board_case.innerHTML != "O") {
-            board_case.innerHTML = "O";
-            board_case.style.color = "#3036f2";
+            setTimeout(function placemove(){
+                board_case.innerHTML = "O";
+                board_case.style.color = "#3036f2";
+            }, 300);
+
             if (checkwinner_computer() == 1){
                 setTimeout(function lose(){
                     alert("Tu as perdu :(");
