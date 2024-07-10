@@ -239,15 +239,16 @@ function playc(number){
         return 1;
     }
     computer_moves();
-    if (checkwinner_computer() != 1 && checkfreespace() === 1){
-        setTimeout(function nullito(){
+    
+    setTimeout(function nullos(){
+        if (checkwinner_computer() != 1 && checkfreespace() === 1){
             alert("Match nul ! (+1)");
             score++;
             score_compte.value = "Score  :  " + score.toString();
-            
-        }, 200);
+        }
+    }, 200);
         return 1;
-    }
+
 }
 function computer_moves(){
     let count = 0;
@@ -265,7 +266,7 @@ function computer_moves(){
                     text_oxo.style.opacity = 0;
                     winner_pannel.value = "Tu as perdu :(";
                     reseters.style.transform = "translate(0%, -0%)";
-                }, 300);
+                }, 200);
             }
             
         }, 200);
@@ -316,7 +317,7 @@ function computer_moves(){
                     return 1;
                 }
             }, 200);
-
+            return 1;
             break;
         }
     } while (board_case.innerHTML === "X" || board_case.innerHTML === "O");
@@ -335,12 +336,13 @@ function checkfreespace(){
         }
     }
     if (type_mode == 1){
-            for (let i = 0; i < 9; i++){
+        for (let i = 0; i < 9; i++){
             if (board_mode1_cases[i].innerHTML === "X" || board_mode1_cases[i].innerHTML === "O"){
                 count++;
             }
         }
-        if (count == 9){
+        if (count === 9){
+            
             return 1;
         }
     }
@@ -584,7 +586,7 @@ function reset2(){
     }
 }
 function pasboutton(){
-    alert("Pour jouer cliquez sur les claviers \"Joueur 1\" et \"Joueur 2\" ci dessous. Pour placer votre symbole il suffit d'appuyer sur la case du clavier correspondant a celle du tableau.");
+    alert("Pour jouer cliquez sur les claviers \"Joueur 1\" et \"Joueur 2\" ci dessous. Pour placer votre symbole il suffit d'appuyer sur la case du clavier correspondant  &agrave celle du tableau.");
 }
 function openpage(){
     if (user.value === "Alois" && mdp.value === "221122"){
@@ -641,7 +643,7 @@ document.querySelector(".close");
 custom_button.addEventListener
 ('click', function () {
     alert_Message_container.innerHTML =
-        "    <h1>Regles du jeu OXO</h1><p>OXO est un jeu pour deux joueurs. On attribue &agrave chaque joueur un symbole, soit \"X\" soit \"O\".</p><h2>Objectif du jeu</h2><p>L'objectif est d'&ecirctre le premier &agrave aligner trois de ses symboles horizontalement, verticalement ou diagonalement.</p><h2>Comment jouer</h2><ol><li>Le jeu se joue sur une grille de 3x3 cases.</li><li>Les joueurs jouent &agrave tour de r&ocircle, en pla&ccedilant leur symbole dans une case vide.</li><li>Le premier joueur qui aligne trois de ses symboles gagne la partie.</li><li>Si toutes les cases sont remplies sans qu'aucun joueur n'ait align&eacute trois symboles, c'est un match nul.</li></ol><p>Amusez-vous bien !</p>";
+        "    <h1>Regles du jeu OXO</h1><p>OXO est un jeu pour deux joueurs. On attribue &agrave chaque joueur un symbole, soit X soit O.</p><h2>Objectif du jeu</h2><p>L'objectif est d'&ecirctre le premier &agrave aligner trois de ses symboles horizontalement, verticalement ou diagonalement.</p><h2>Comment jouer</h2><ol><li>Le jeu se joue sur une grille de 3x3 cases.</li><li>Les joueurs jouent &agrave tour de r&ocircle, en pla&ccedilant leur symbole dans une case vide.</li><li>Le premier joueur qui aligne trois de ses symboles gagne la partie.</li><li>Si toutes les cases sont remplies sans qu'aucun joueur n'ait align&eacute trois symboles, c'est un match nul.</li></ol><p>Amusez-vous bien !</p>";
     alertBox.style.display = "block";
 });
 
