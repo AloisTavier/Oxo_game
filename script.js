@@ -637,8 +637,6 @@ let custom_button =
 document.getElementById("info");
 let close_img =
 document.querySelector(".close");
-let body =
-document.querySelector("body");
 
 custom_button.addEventListener
 ('click', function () {
