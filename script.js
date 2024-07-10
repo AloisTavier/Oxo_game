@@ -232,7 +232,6 @@ function playc(number){
     if (checkwinner_computer() != 1 && checkfreespace() === 1){
         setTimeout(function nullos(){
             alert("Match nul ! (+1)");
-
             score++;
             score_compte.value = "Score  :  " + score.toString();
             
@@ -252,45 +251,49 @@ function playc(number){
 }
 function computer_moves(){
     let count = 0;
-    let move = compute_move();
-    if (move !=0 ){
-
-        setTimeout(function placemove(){
-            move.style.color = "#3036f2";
-            move.innerHTML = "O";
-        }, 300);
-        if (checkwinner_computer() == 1){
-            setTimeout(function lose(){
-                alert("Tu as perdu :(");
-                board_mode1.style.display = 'none';
-                winner_pannel.style.display = 'block';
-                winner_pannel.style.background = "lightslategrey";
-                text_oxo.style.opacity = 0;
-                winner_pannel.value = "Tu as perdu :(";
-                reseters.style.transform = "translate(0%, -0%)";
-            }, 300);
-        }
-        return 1;
-    }
     let move_pot = compute_move2();
     if (move_pot !=0){
         setTimeout(function placemove(){
             move_pot.style.color = "#3036f2";
             move_pot.innerHTML = "O";
-        }, 300);
-        if (checkwinner_computer() == 1){
-            setTimeout(function lose(){
-                alert("Tu as perdu :(");
-                board_mode1.style.display = 'none';
-                winner_pannel.style.display = 'block';
-                winner_pannel.style.background = "lightslategrey";
-                text_oxo.style.opacity = 0;
-                winner_pannel.value = "Tu as perdu :(";
-                reseters.style.transform = "translate(0%, -0%)";
-            }, 300);
-        }
+            if (checkwinner_computer() == 1){
+                setTimeout(function lose(){
+                    alert("Tu as perdu :(");
+                    board_mode1.style.display = 'none';
+                    winner_pannel.style.display = 'block';
+                    winner_pannel.style.background = "lightslategrey";
+                    text_oxo.style.opacity = 0;
+                    winner_pannel.value = "Tu as perdu :(";
+                    reseters.style.transform = "translate(0%, -0%)";
+                }, 300);
+            }
+            
+        }, 200);
         return 1;
     }
+    let move = compute_move();
+    if (move !=0 ){
+        setTimeout(function placemove(){
+            move.style.color = "#3036f2";
+            move.innerHTML = "O";
+            if (checkwinner_computer() == 1){
+                setTimeout(function lose(){
+                    alert("Tu as perdu :(");
+                    board_mode1.style.display = 'none';
+                    winner_pannel.style.display = 'block';
+                    winner_pannel.style.background = "lightslategrey";
+                    text_oxo.style.opacity = 0;
+                    winner_pannel.value = "Tu as perdu :(";
+                    reseters.style.transform = "translate(0%, -0%)";
+                }, 300);
+            }
+            
+        }, 200);
+        return 1;
+
+    }
+    
+
     do {
         let random = Math.floor(Math.random() * 9);
         count++;
@@ -300,20 +303,20 @@ function computer_moves(){
             setTimeout(function placemove(){
                 board_case.innerHTML = "O";
                 board_case.style.color = "#3036f2";
-            }, 300);
+                if (checkwinner_computer() == 1){
+                    setTimeout(function lose(){
+                        alert("Tu as perdu :(");
+                        board_mode1.style.display = 'none';
+                        winner_pannel.style.display = 'block';
+                        text_oxo.style.opacity = 0;
+                        winner_pannel.style.background = "lightslategrey";
+                        winner_pannel.value = "Tu as perdu :(";
+                        reseters.style.transform = "translate(0%, -0%)";
+                    }, 300);
+                    return 1;
+                }
+            }, 200);
 
-            if (checkwinner_computer() == 1){
-                setTimeout(function lose(){
-                    alert("Tu as perdu :(");
-                    board_mode1.style.display = 'none';
-                    winner_pannel.style.display = 'block';
-                    text_oxo.style.opacity = 0;
-                    winner_pannel.style.background = "lightslategrey";
-                    winner_pannel.value = "Tu as perdu :(";
-                    reseters.style.transform = "translate(0%, -0%)";
-                }, 300);
-                return 1;
-            }
             break;
         }
     } while (board_case.innerHTML === "X" || board_case.innerHTML === "O");
