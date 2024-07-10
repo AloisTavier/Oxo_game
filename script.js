@@ -629,3 +629,25 @@ function cancel(){
     user.value = "";
     mdp.value = "";
 }
+let alertBox =
+document.getElementById("customAlertBox");
+let alert_Message_container =
+document.getElementById("alertMessage");
+let custom_button =
+document.getElementById("info");
+let close_img =
+document.querySelector(".close");
+let body =
+document.querySelector("body");
+
+custom_button.addEventListener
+('click', function () {
+    alert_Message_container.innerHTML =
+        "    <h1>Regles du jeu OXO</h1><p>OXO est un jeu pour deux joueurs. On attribue &agrave chaque joueur un symbole, soit \"X\" soit \"O\".</p><h2>Objectif du jeu</h2><p>L'objectif est d'&ecirctre le premier &agrave aligner trois de ses symboles horizontalement, verticalement ou diagonalement.</p><h2>Comment jouer</h2><ol><li>Le jeu se joue sur une grille de 3x3 cases.</li><li>Les joueurs jouent &agrave tour de r&ocircle, en pla&ccedilant leur symbole dans une case vide.</li><li>Le premier joueur qui aligne trois de ses symboles gagne la partie.</li><li>Si toutes les cases sont remplies sans qu'aucun joueur n'ait align&eacute trois symboles, c'est un match nul.</li></ol><p>Amusez-vous bien !</p>";
+    alertBox.style.display = "block";
+});
+
+close_img.addEventListener
+('click', function () {
+    alertBox.style.display = "none";
+});
