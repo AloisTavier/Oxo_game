@@ -245,6 +245,7 @@ function reset(){
     button_play.style.display = 'block';
     puissance4.style.display = 'none';
     boutons.style.display = 'none';
+    reseters.style.transform = "translate(0%, 0%)";
     score_player1 = 0;
     score_player2 = 0;
     score.style.display = "none";
@@ -253,7 +254,7 @@ function replay(){
     boutons_container.style.display = "flex";
     winner_place.style.display = "none";
     puissance4.style.display = 'block';
-    reseters.style.transform = "translate(0%, 0%)"
+    reseters.style.transform = "translate(0%, 0%)";
     boutons.style.display = 'block';
     for (let i = 0; i < 7; i++){
         for (let j = 0; j < 6; j++){
