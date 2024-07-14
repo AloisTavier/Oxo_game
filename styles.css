@@ -1,0 +1,211 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:seashell;
+}
+/*Entete du jeu*/
+#title{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(79, 101, 174);
+    position: fixed;
+    z-index: 1000;
+    height: 10%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+#score{
+    height: 50%;
+    width: 15%;
+    border: solid 2px black;
+    border-radius: 15px;
+    margin-right: 1.5%;
+    color: black;
+    text-align: center;
+    background-color: rgb(223, 207, 31);
+    font-size: 20px;
+    font-weight: bold;
+}
+#winner-loc{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 1;
+}
+#winner-pannel{
+    position: fixed;
+    top:20%;
+    left: 15%;
+    height: 45%;
+    width: 70%;
+    border-radius: 40px;
+    border:none;
+    background-image: url(artifice.gif);
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    opacity: 1;
+}
+#Name{
+    margin-top: 16%;
+    text-align: center;
+    color: #4b5caa;
+    font-size: 8rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-shadow: 10px 10px 10px #8d8d8d;
+    z-index: 3;
+}
+/*Jeu puissance 4 table*/
+#puissance4-loc{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 1;
+}
+
+#puisscance4-board{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    margin-top: 12%;
+    z-index: 100;
+}
+#containers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(55, 65, 115);
+    gap: 35px;
+    padding: 15px;
+
+}
+.container{
+    background-color: rgb(55, 65, 115);
+    display: flex;
+    border-radius: 20px;
+    margin: 1px;
+    flex-direction: column;
+    gap: 30px;
+}
+.cell{
+    height: 40px;
+    width:40px;
+    border: solid 2px black;
+    border-radius:50%;
+    background-color: rgb(255, 255, 255);
+}
+/* Boutons derniere le puissance 4*/
+#button-loc{
+    position: fixed;
+    z-index: 150;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 1;
+}
+.buttons-board{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    margin-top: 12%;
+    
+}
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    border-radius: 20px;
+    opacity: 0.5;
+    background-color: rgb(55, 65, 115);
+
+}
+.bouton{
+    height: 446px;
+    width:76px;
+    border: solid 3px black;
+    background-color: white;
+    border-radius: 20px;
+    opacity: 0;
+}
+.bouton:hover{
+    transition-duration: 0.1s;
+    opacity: 0.5;
+}
+.bouton:active{
+    opacity: 0.3;
+}
+#reseters{
+    display: flex;
+    margin-top: 35px;
+    justify-content: center;
+    align-items: center;
+    gap:15%;
+    width: 500px;
+}
+.reseter{
+    background-color:  rgb(121, 133, 184);
+    color: #ffffff;
+    border-radius: 5px;
+    border: solid;
+    border-color: #000;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+.reseter:hover{
+    transform: scale(1.07);
+    background-color: rgb(100, 109, 152);
+}
+.reseter:active{
+    transform: scale(0.98);
+}
+#mode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 10%;
+
+}
+
+.buttonmode{
+    background-color:  rgb(121, 133, 184);
+    color: #ffffff;
+    border-radius: 5px;
+    border: solid;
+    width: 260px;
+    height: 90px;
+    border-color: #000;
+    transition: transform 0.4s ease;
+    font-size: 26px;
+    cursor: pointer;
+}
+.buttonmode:hover{
+    transform: scale(1.07);
+    background-color:  rgb(100, 109, 152);
+}
+.buttonmode:active{
+    transform: scale(0.95);
+}

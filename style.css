@@ -225,6 +225,9 @@ body{
     gap:5px;
 }
 .reseter{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
     background-color: #838282;
     color: #ffffff;
     border-radius: 5px;

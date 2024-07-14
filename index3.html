@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Puissance 4</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.O">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="title">
+            <input id="score" style="display: none;">
+        </div>
+        <div id="winner-loc" style="display: none;">
+            <input id="winner-pannel" >
+        </div>
+        <div id="Name">Puissance 4</div>
+        <div id="button-loc" style="display: none;">
+            <div class="buttons-board">
+                <div class="buttons-container">            
+                    <button class="bouton" onclick="play(1)"></button>
+                    <button class="bouton" onclick="play(2)"></button>
+                    <button class="bouton" onclick="play(3)"></button>
+                    <button class="bouton" onclick="play(4)"></button>
+                    <button class="bouton" onclick="play(5)"></button>
+                    <button class="bouton" onclick="play(6)"></button>
+                    <button class="bouton" onclick="play(7)"></button>
+                </div>
+                <div id ="reseters" >
+                    <button class="reseter" id="reset" onclick="reset()" >Menu principal</button>
+                    <button class="reseter" id="replay" onclick="replay()">Rejouer</button>
+                </div>
+            </div>
+        </div>
+        <div id="puissance4-loc" style="display: none;">
+            <div id="puisscance4-board">
+                <div id="containers">
+                    <div id="container1" class="container">
+                        <div id="c11" class="cell"></div>
+                        <div id="c12" class="cell"></div>
+                        <div id="c13" class="cell"></div>
+                        <div id="c14" class="cell"></div>
+                        <div id="c15" class="cell"></div>
+                        <div id="c16" class="cell"></div>
+                    </div>
+                    <div id="container2" class="container">
+                        <div id="c21" class="cell"></div>
+                        <div id="c22" class="cell"></div>
+                        <div id="c23" class="cell"></div>
+                        <div id="c24" class="cell"></div>
+                        <div id="c25" class="cell"></div>
+                        <div id="c26" class="cell"></div>
+                    </div>
+                    <div id="container3" class="container">
+                        <div id="c31" class="cell"></div>
+                        <div id="c32" class="cell"></div>
+                        <div id="c33" class="cell"></div>
+                        <div id="c34" class="cell"></div>
+                        <div id="c35" class="cell"></div>
+                        <div id="c36" class="cell"></div>
+                    </div>
+                    <div id="container4" class="container">
+                        <div id="c41" class="cell"></div>
+                        <div id="c42" class="cell"></div>
+                        <div id="c43" class="cell"></div>
+                        <div id="c44" class="cell"></div>
+                        <div id="c45" class="cell"></div>
+                        <div id="c46" class="cell"></div>
+                    </div>
+                    <div id="container5" class="container">
+                        <div id="c51" class="cell"></div>
+                        <div id="c52" class="cell"></div>
+                        <div id="c53" class="cell"></div>
+                        <div id="c54" class="cell"></div>
+                        <div id="c55" class="cell"></div>
+                        <div id="c56" class="cell"></div>
+                    </div>
+                    <div id="container6" class="container">
+                        <div id="c61" class="cell"></div>
+                        <div id="c62" class="cell"></div>
+                        <div id="c63" class="cell"></div>
+                        <div id="c64" class="cell"></div>
+                        <div id="c65" class="cell"></div>
+                        <div id="c66" class="cell"></div>
+                    </div>
+                    <div id="container7" class="container">
+                        <div id="c71" class="cell"></div>
+                        <div id="c72" class="cell"></div>
+                        <div id="c73" class="cell"></div>
+                        <div id="c74" class="cell"></div>
+                        <div id="c75" class="cell"></div>
+                        <div id="c76" class="cell"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mode">
+            <button class="buttonmode" id="mode1" onclick="mode1()"><b>Jouer &agrave; deux</b></button>
+        </div>
+    <script src="scripts.js"></script>
+    </body>
+</html>
