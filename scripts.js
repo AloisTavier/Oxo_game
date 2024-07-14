@@ -222,7 +222,7 @@ function check_winner(row_num, column_number, column){
             score.value = "SCORE  " + score_player1.toString() + " : " + score_player2.toString();
             puissance4.style.display = "none";
             boutons_container.style.display = "none";
-            reseters.style.transform = "translate(0%, 1%)";
+            reseters.style.transform = "translate(0%, 600%)";
             winner_place.style.display = "block";
             winner_pannel.value = "Bravo joueur bleu !";
         }
@@ -231,6 +231,8 @@ function check_winner(row_num, column_number, column){
 
 function mode1(){
     winner_place.style.display = "none";
+    boutons_container.style.display = "flex";
+    reseters.style.transform = "translate(0%, 0%)";
     name_p.style.display = "none";
     button_play.style.display = 'none';
     puissance4.style.display = 'block';
@@ -245,7 +247,6 @@ function reset(){
     button_play.style.display = 'block';
     puissance4.style.display = 'none';
     boutons.style.display = 'none';
-    reseters.style.transform = "translate(0%, 0%)";
     score_player1 = 0;
     score_player2 = 0;
     score.style.display = "none";
