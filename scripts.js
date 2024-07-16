@@ -230,26 +230,41 @@ function check_winner(row_num, column_number, column){
 }
 
 function mode1(){
+    name_p.style.transitionDuration = "1s";
     winner_place.style.display = "none";
     boutons_container.style.display = "flex";
     reseters.style.transform = "translate(0%, 0%)";
-    name_p.style.display = "none";
+    name_p.style.opacity = 0.7;
+    name_p.style.scale = 1.5;
+    name_p.style.transform = "translate(0%, 30%)";
     button_play.style.display = 'none';
     puissance4.style.display = 'block';
+    puissance4.style.transitionDuration = "1s";
+    puissance4.style.opacity = 1;
     boutons.style.display = 'block';
-    score.style.display = 'block';
+    score.style.transitionDuration = "1s";
+    score.style.opacity = 1;
     score.value = "SCORE  0 : 0" 
 }
 function reset(){
+    score.style.transitionDuration = "1s";
+    score.style.opacity = 0;
+    name_p.style.transitionDuration = "1s";
+    name_p.style.opacity = 1;
+    name_p.style.scale = 1;
     boutons_container.style.display = "none";
     winner_place.style.display = "none";
     name_p.style.display = "block";
     button_play.style.display = 'block';
-    puissance4.style.display = 'none';
+    puissance4.style.transitionDuration = "1s";
+    puissance4.style.opacity = 0;
+    setTimeout(function ok(){
+        puissance4.style.display = 'none';
+    }, 50);
+    reseters.style.transform = "translate(0%, 0%)";
     boutons.style.display = 'none';
     score_player1 = 0;
     score_player2 = 0;
-    score.style.display = "none";
 }
 function replay(){
     boutons_container.style.display = "flex";
@@ -266,3 +281,36 @@ function replay(){
     }
     turn = 0;
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('open');
+    });
+});
+function show1(){
+    window.open("index2.html", "_self");
+}
+function show2(){
+    window.open("index2.html", "_self");
+}
+let alertBox =
+document.getElementById("customAlertBox");
+let alert_Message_container =
+document.getElementById("alertMessage");
+let custom_button =
+document.getElementById("info");
+let close_img =
+document.querySelector(".close");
+
+custom_button.addEventListener
+('click', function () {
+    alert_Message_container.innerHTML =
+        "    <h1>Regles du Puissance 4</h1><p>Le puissance 4 est un jeu pour deux joueurs. On attribue &agrave; chaque joueur une couleur, soit rouge soit bleu.</p><h2>Objectif du jeu</h2><p>L'objectif est d'&ecirctre le premier &agrave aligner quatre de ses pions horizontalement, verticalement ou diagonalement.</p><h2>Comment jouer</h2><ol><li>Le jeu se joue sur une grille de 6x7 cases.</li><li>Les joueurs jouent &agrave tour de r&ocircle, en pla&ccedilant leur pion dans une colonne.</li><li>Le premier joueur qui aligne quatre de ses pions gagne la partie.</li><li>Si toutes les cases sont remplies sans qu'aucun joueur n'ait align&eacute quatre pions c'est un match nul.</li></ol><p>Amusez-vous bien !</p>";
+    alertBox.style.display = "block";
+});
+
+close_img.addEventListener
+('click', function () {
+    alertBox.style.display = "none";
+});

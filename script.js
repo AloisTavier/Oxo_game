@@ -91,9 +91,9 @@ function mode1(){
         score_compte.style.transitionDuration = "2s";
         board_mode1.style.scale = 1.2;
         score_compte.style.opacity = 1;
-        text_oxo.style.transform = "translate(0%, 30%)";
-        board_mode1.style.transform = "translate(0%, 15%)";
-        reseters.style.transform = "translate(0, 75%)";
+        text_oxo.style.transform = "translate(0%, 20%)";
+        board_mode1.style.transform = "translate(0%, 0%)";
+        reseters.style.transform = "translate(0, 45%)";
         text_oxo.style.opacity = 0.6;
         text_oxo.style.scale = 1.8;
         board_mode1.style.opacity = 0.8;
@@ -650,4 +650,17 @@ custom_button.addEventListener
 close_img.addEventListener
 ('click', function () {
     alertBox.style.display = "none";
+});
+function show1(){
+    window.open("index2.html", "_self");
+}
+function show3(){
+    window.open("index3.html", "_self");
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('open');
+    });
 });

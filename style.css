@@ -14,8 +14,13 @@ body{
     align-items: center;
     gap: 30px;
     padding: 20px;
-
-
+}
+#table-matiere{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 20px;
 }
 #info{
     display: flex;
@@ -40,8 +45,59 @@ body{
     background-color: white;
     transform: scale(1.1);
 }
+#menu-toggle {
+    margin-left: 15px;
+    background:none;
+    border: none;
+    height: fit-content;
+    width: fit-content;
+    color: white;
+    font-size: 34px;
+    cursor: pointer;
+}
+#menu-toggle:active {
+    transform: scale(0.93);
+}
+#menu {
+    width: 300px;
+    height: 100vh;
+    background-color: rgb(234, 220, 212);
+    border-right: 1px solid #afafaf;
+    transition: transform 0.7s ease;
+    transform: translateX(-100%);
+    position: fixed;
+    top: 45px; /* ajuste pour éviter de couvrir le menu header */
+    z-index: 200;
+}
+#menu.open {
+    transform: translateX(0);
+}
+#conversations {
+    padding: 10px;
+    padding-top: 60px; /* pour éviter le chevauchement avec le menu header */
+}
+#conversation {
+    padding: 25px 15px 25px 15px;
+    width: 270px;
+    border-radius: 0px;
+    font-size: large;
+    text-align: left;
+    background-color:  rgb(234, 220, 212);
+    transition: transform 0.2s ease;
+    color: #3e3e3e;
+    border: none;
+    border-bottom: 1px solid #a4a4a4;
+    
+    cursor: pointer;
+}
+#conversation:hover {
+    transform: scale(0.94);
+}
+#conversation:active {
+    transform: scale(0.90);
+}
 #Name{
-    transform: translate(0, 35px);
+    margin-top: 12%;
     text-align: center;
     color: #4b5caa;
     justify-content: center ;
@@ -58,7 +114,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 50px;
-    margin-top: 20px;
+    margin-top: 10px;
 
 }
 
@@ -83,16 +139,15 @@ body{
 }
 #title{
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    font-size: 30px;
-    color: #ebebeb;
+    background-color: rgb(79, 101, 174);
+    position: fixed;
+    z-index: 1000;
+    height: 13%;
+    width: 100%;
+    left: 0;
     top: 0;
-    height: 60px;
-    background-color: rgb(121, 133, 184);
-    padding: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    /*font-weight:bold;*/
 }
 #score{
     height: 40px;
@@ -227,7 +282,7 @@ body{
 .reseter{
     display: flex;
     justify-content: center;
-    width: fit-content;
+    width: 200px;
     background-color: #838282;
     color: #ffffff;
     border-radius: 5px;
@@ -302,3 +357,11 @@ body{
     from {transform: scale(0)} 
     to {transform: scale(1)}
   }
+
+  /*    <div id="title">
+        <h2>JEU OXO</h2>
+        <div id="right-tables">
+            <input id="score" style="display: none;" readonly>
+            <button id="info" onclick="info()">?</button>
+        </div>
+    </div>*/

@@ -2,15 +2,29 @@
 <html lang="fr">
 <head>
     <title>Jeu oxo</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.O">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div id="title">
-        <h2>JEU OXO</h2>
+        <div id="table-matiere">
+            <button id="menu-toggle">☰</button>
+            <h2>Table des matières</h2>
+        </div>
         <div id="right-tables">
             <input id="score" style="display: none;" readonly>
             <button id="info" onclick="info()">?</button>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="conversations">
+            <!-- Les conversations précédentes iront ici -->
+            <button onclick="show1()" id="conversation"><b>Oxo : 1 ou 2 joueurs</b></button>
+            <button onclick="show3()" id="conversation"><b>Puissance 4 : 2 joueurs</b></button>
+            <audio id="myAudio" src="RickRoll.MP3"></audio>
+            <!-- Ajoutez d'autres conversations ici -->
         </div>
     </div>
     <div id="customAlertBox" class="custom-alert">
