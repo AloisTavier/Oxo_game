@@ -92,8 +92,8 @@ function mode1(){
         board_mode1.style.scale = 1.2;
         score_compte.style.opacity = 1;
         text_oxo.style.transform = "translate(0%, 20%)";
-        board_mode1.style.transform = "translate(0%, 0%)";
-        reseters.style.transform = "translate(0, 45%)";
+        board_mode1.style.transform = "translate(0%, 20%)";
+        reseters.style.transform = "translate(0, 85%)";
         text_oxo.style.opacity = 0.6;
         text_oxo.style.scale = 1.8;
         board_mode1.style.opacity = 0.8;
